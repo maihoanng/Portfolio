@@ -1,4 +1,3 @@
-import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
@@ -29,7 +28,7 @@ const MyAbout = () => {
             className="hover:filter hover:scale-110 transition duration-500 z-10 w-full
                             max-w-[100px] md:max-w-[200px]"
             // when hovering over image, give it filter of saturatio of 200%
-            src="assets/sunst-cliffs.png"
+            src="assets/sunset-cliffs.png"
           />
         )}
 

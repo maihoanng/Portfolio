@@ -1,7 +1,5 @@
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import SocialMediaIcons from "../components/SocialMediaIcons";
 import Typewriter from "typewriter-effect";
 
 const Landing = ({ setSelectedPage }) => {
@@ -21,7 +19,7 @@ const Landing = ({ setSelectedPage }) => {
             className="hover:filter hover:scale-110 transition duration-500 z-10 w-full
                                 max-w-[400px] md:max-w-[600px]"
             // when hovering over image, give it filter of saturatio of 200%
-            src="assets/mai-stanford-headshot.jpg"
+            src="assets/autumn3.png"
           />
         ) : (
           <img
@@ -29,7 +27,7 @@ const Landing = ({ setSelectedPage }) => {
             className="hover:filter hover:scale-110 transition duration-500 z-10 w-full
                             max-w-[400px] md:max-w-[600px]"
             // when hovering over image, give it filter of saturatio of 200%
-            src="assets/mai-stanford-headshot.jpg"
+            src="assets/headshot-2023.jpg"
           />
         )}
       </div>
@@ -65,7 +63,7 @@ const Landing = ({ setSelectedPage }) => {
         <p className="mt-10 mb-7 text-lg text-center md:text-start text-deep-blue">
           I'm a student based in the{" "}
           <span className="text-yellow">Bay Area</span> where I study{" "}
-          <span className="text-yellow">Symbolic Systems</span> at Stanford
+          <span className="text-yellow">Computer Science</span> at Stanford
           University.{" "}
         </p>
         <p className="mt-10 mb-7 text-lg text-center md:text-start text-deep-blue">
@@ -86,9 +84,7 @@ const Landing = ({ setSelectedPage }) => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 }, //
           }}
-        >
-          <SocialMediaIcons />
-        </motion.div>
+        ></motion.div>
       </div>
     </section>
   );

@@ -6,6 +6,8 @@ import Navbar from "./scenes/Navbar";
 import LineGradient from "./components/LineGradient";
 import MyAbout from "./scenes/MyAbout";
 import MyProjects from "./scenes/MyProjects";
+import MyWriting from "./scenes/MyWriting";
+import MyResume from "./scenes/MyResume";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("mh");
@@ -39,8 +41,14 @@ function App() {
           setSelectedPage={setSelectedPage}
         />
       </div>
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto">
         <MyProjects
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
+      </div>
+      <div className="w-5/6 mx-auto md:h-full">
+        <MyWriting
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />

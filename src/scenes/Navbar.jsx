@@ -16,7 +16,7 @@ const Link = ({ page = "", selectedPage, setSelectedPage }) => {
   );
 };
 
-export const menuItems = ["About", "Projects", "Writing", "Resume"];
+export const menuItems = ["About", "Projects", "Writing"];
 
 const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
