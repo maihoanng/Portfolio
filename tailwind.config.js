@@ -6,10 +6,12 @@ module.exports = {
     extend: {
       colors: {
         blue: "#97BFC7",
-        red: "#334C5E", // navbar for ex
-        yellow: "#5097A3", // hover color
+        red: "#0A1930", // navbar for ex
+        yellow: "#ff4df3", // noen blue
         grey: "#EDEDED",
-        "deep-blue": "#241F15", // background
+        white: "#CCD6F6", // off white
+        "deep-blue": "0A1930", // background
+        "light-blue": "#8892AF", // darker off blue
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
@@ -22,6 +24,7 @@ module.exports = {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
+        source: ["Source Code Pro"],
       },
       content: {
         brush: "url('./assets/brush.png')",

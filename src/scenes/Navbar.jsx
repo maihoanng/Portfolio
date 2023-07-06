@@ -7,7 +7,7 @@ const Link = ({ page = "", selectedPage, setSelectedPage }) => {
   return (
     <AnchorLink
       className={`${selectedPage === lowerCasePage ? "text-yellow" : ""} 
-                hover:text-blue hover:scale-110 transition duration-500`}
+                hover:text-yellow hover:scale-110 transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -16,7 +16,7 @@ const Link = ({ page = "", selectedPage, setSelectedPage }) => {
   );
 };
 
-export const menuItems = ["About", "Projects", "Writing", "Resume"];
+export const menuItems = ["About", "Projects", "Contact"];
 
 const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
@@ -48,6 +48,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           </div>
         ) : (
           <button
+            id="navBar"
             className="rounded-full bg-red p-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
@@ -66,7 +67,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             </div>
 
             {/* Menu Items */}
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white">
               {menuItems.map((item, index) => (
                 <Link
                   key={index}

@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="app">
-      <Navbar selectedpage={selectedPage} setSelectedPage={setSelectedPage} />
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <div className="w-5/6 mx-auto md:h-full">
         {isAboveMediumScreen && (
           <DotGroup
@@ -39,7 +39,7 @@ function App() {
           setSelectedPage={setSelectedPage}
         />
       </div>
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-3/4 mx-auto md:h-full">
         <MyProjects
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}

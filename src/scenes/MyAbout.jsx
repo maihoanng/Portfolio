@@ -6,9 +6,9 @@ const MyAbout = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <section id="about" className="pt-10 pb-24">
+    <section id="about" className="pt-28">
       {/* Image */}
-      <div className="md:order-2 flex justify-left mt-16 md:mt-32 ">
+      <div className="md:order-2 flex justify-left md:mt-32 ">
         {isAboveMediumScreens ? (
           <img
             style={{
@@ -45,37 +45,39 @@ const MyAbout = () => {
             visible: { opacity: 1, x: 65, y: 10 }, //
           }}
         >
-          <p className="font-playfair font-semibold text-4xl mb-5 text-deep-blue">
-            ABOUT <span className="text-red">ME</span>
+          <p className="font-helvetica font-semibold text-4xl mb-5 text-white">
+            <span className="text-yellow font-source text-lg">0.1 </span>
+            ABOUT <span className="text-light-blue">ME</span>
           </p>
-          <h4 style={{ fontSize: "20px" }} className="text-2xl text-deep-blue">
-            Hi again! My name is Mai Hoàng.
+          <h4
+            style={{ fontSize: "18px" }}
+            className="text-2xl font-helvetica font-light text-deep-blue"
+          >
+            Hi again! My name is Mai. I'm a developer with a passion for
+            designing and building technology that enhances the lives of
+            individuals and society as a whole, rather than being driven by
+            profit and efficiency.
           </h4>
           <br />
           <p
             style={{
               fontSize: "18px",
             }}
-            className=" text-deep-blue"
+            className=" text-deep-blue font-helvetica font-light"
           >
-            I was born in Vietnam and am currently based in the Bay Area. I'm
-            passionate about building technology that serves to enhance the
-            lives of individuals and society as a whole, rather than being
-            purely driven by profit and efficiency. Right now at Stanford, I'm
-            learning how to do just that. I'm a sophomore studying Symbolic
-            Systems, combining computer science, psychology, philosophy, and
-            linguistics to explore the ways in which humans and society interact
-            with technology.
+            Right now, I am focused on building accessible digital experiences
+            for underserved youth in Singapore at{" "}
+            <span className="text-yellow hover:underline">
+              <a href="https://rivervalleyirregulars.com/">
+                River Valley Irregulars
+              </a>
+            </span>
+            .
           </p>
           <p>
             <br />
           </p>
-          <p style={{ fontSize: "18px" }} className="text-deep-blue">
-            When I'm not coding or studying, you can find me crocheting,
-            watching Modern Family, reading all kinds of books (especially
-            philosophy and Asian American literature), or playing with my fat
-            fluffy cat, Charlene!
-          </p>
+          <p style={{ fontSize: "18px" }} className="text-white font-light"></p>
         </motion.div>
       </div>
       <div className="md:flex md:justify-end md:gap-16 mt-32"></div>

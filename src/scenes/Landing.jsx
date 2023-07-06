@@ -10,9 +10,9 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id="mh"
-      className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10"
+      className="md:flex md:justify-between md:items-center px-10 md:h-full gap-16 py-5"
     >
-      {/* Image */}
+      {/* Image
       <div className="md:order-1 flex justify-left basis-2/5 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
           <img
@@ -21,7 +21,7 @@ const Landing = ({ setSelectedPage }) => {
             className="hover:filter hover:scale-110 transition duration-500 z-10 w-full
                                 max-w-[400px] md:max-w-[600px]"
             // when hovering over image, give it filter of saturatio of 200%
-            src="assets/mai-stanford-headshot.jpg"
+            src="assets/headshot-2023.jpg"
           />
         ) : (
           <img
@@ -29,27 +29,35 @@ const Landing = ({ setSelectedPage }) => {
             className="hover:filter hover:scale-110 transition duration-500 z-10 w-full
                             max-w-[400px] md:max-w-[600px]"
             // when hovering over image, give it filter of saturatio of 200%
-            src="assets/mai-stanford-headshot.jpg"
+            src="assets/headshot-2023.jpg"
           />
         )}
-      </div>
+      </div> */}
 
       {/* main section */}
-      <div className="z-30 basis-2/5 mt-12 md:mt-32">
+      <div className="z-30 basis-5/6 mt-12 md:mt-16">
         {/* headings */}
-        <p className="text-6xl font-playfair z-10 text-center md:text-start text-deep-blue">
-          <span>
+        <p className="text-2xl font-source z-10 py-7 text-center md:text-start text-yellow">
+          Hi! My name is
+          {/* <span>
             <Typewriter
               onInit={(typewriter) =>
                 typewriter
                   .pauseFor(100)
                   .typeString("Hi!")
                   .pauseFor(600)
-                  .typeString(" I'm Mai.")
+                  .typeString(" My name is")
                   .start()
               }
             />
-          </span>
+          </span> */}
+        </p>
+
+        <p className="text-7xl font-helvetica font-semibold z-10 py-3 text-center md:text-start text-white">
+          Mai Hoang.
+        </p>
+        <p className="text-6xl font-helvetica font-semibold z-10 text-center md:text-start text-light-blue">
+          I want to build technology for social good.
         </p>
         <motion.div
           initial="hidden" // when we start
@@ -62,19 +70,26 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 }, // once div is in view, go from opacity of 0 to opacity of 1, go from x: 50 to x: 0
           }}
         ></motion.div>
-        <p className="mt-10 mb-7 text-lg text-center md:text-start text-deep-blue">
-          I'm a student based in the{" "}
-          <span className="text-yellow">Bay Area</span> where I study{" "}
-          <span className="text-yellow">Symbolic Systems</span> at Stanford
-          University.{" "}
+
+        <p className="mt-10 mb-7 font-helvetica font-light text-lg md:text-start text-deep-blue">
+          I'm based in the Bay Area, where I study Computer Science at Stanford
+          University. I'm broadly interested in education, psychology/cognition,
+          and artificial intelligence. Currently, I'm working at{" "}
+          <span className="text-yellow hover:underline">
+            <a href="https://rivervalleyirregulars.com/">
+              River Valley Irregulars
+            </a>
+          </span>
+          , an EdTech startup in Singapore.
         </p>
-        <p className="mt-10 mb-7 text-lg text-center md:text-start text-deep-blue">
+
+        {/* <p className="mt-10 mb-7 text-lg text-center md:text-start text-deep-blue">
           I want to build technology that is{" "}
           <span className="text-yellow">human centered </span> and{" "}
           <span className="text-yellow">uplifts marginalized communities</span>{" "}
           rather than being driven by profit and efficiency.
-        </p>
-        <p></p>
+        </p> */}
+
         <motion.div
           className="flex mt-5 justify-center md:justify-start"
           initial="hidden"

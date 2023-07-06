@@ -7,41 +7,34 @@ const MyProjects = () => {
   const filters = ["All", "CS", "Art"];
   const projects = [
     {
-      title: "Sudoku Solver",
+      title: "Things With You",
+      subtitle: "Full-Stack Web App",
       type: "cs",
-      description: "C++ program to solve any valid Sudoku puzzle.",
-      image: "assets/Sudoku.png",
+      description:
+        "Full-stack web application enabling users to create collaborative bucket lists with their significant other or friends. Supports Google authentication and collaboration.",
+      technologies: [
+        "JavaScript  ",
+        "HTML/CSS ",
+        "MongoDB ",
+        "ExpressJS ",
+        "Google OAuth ",
+      ],
+      image: "/assets/thingswithyou.png",
     },
     {
       title: "Popcorn App",
+      subtitle: "Cross Platform Mobile App",
       type: "cs",
       description:
-        "Cross-platform app displaying movie showtimes. Made with React Native & Expo.",
-      image: "assets/popcorn.png",
-    },
-    {
-      title: "Autumn Painting",
-      type: "art",
-      description: "A road in autumn. Materials: acrylic on canvas.",
-      image: "assets/autumn3.png",
-    },
-    {
-      title: "Butterfly Crochet Top",
-      type: "art",
-      description: "materials: yarn, 4 mm crochet hook",
-      image: "assets/butterfly-top.jpg",
-    },
-    {
-      title: "Spirited Away",
-      type: "art",
-      description: "gouache on cardstock",
-      image: "assets/spirited-away.jpg",
-    },
-    {
-      title: "Wildflower Embroidery",
-      type: "art",
-      description: "thread",
-      image: "assets/floral-embroidery.jpg",
+        "Cross-platform mobile app displaying movie showtimes. Made with React Native & Expo.",
+      technologies: [
+        "JavaScript ",
+        "HTML/CSS ",
+        "React Native ",
+        "Expo ",
+        "Box Office API",
+      ],
+      image: "assets/popcorna.png",
     },
   ];
 
@@ -52,7 +45,7 @@ const MyProjects = () => {
   const projectsToUse = selectedFilter === "All" ? projects : filteredProjects;
 
   return (
-    <section id="projects" className="pt-24 pb-24">
+    <section id="projects" className="pt-32 pb-24">
       <motion.div
         className="md:w-1/3 mx-auto text-center"
         initial="hidden"
@@ -66,14 +59,15 @@ const MyProjects = () => {
       >
         {/* Page Title (Projects) */}
         <div>
-          <p className="font-playfair font-semibold text-4xl mb-5 text-deep-blue">
-            MY <span className="text-red">PROJECTS</span>
+          <p className="font-helvetica font-semibold text-4xl mb-10 text-light-grey">
+            <span className="text-yellow font-source text-lg">0.2 </span>
+            MY <span className="text-light-blue">PROJECTS</span>
           </p>
         </div>
       </motion.div>
 
       {/* Filter Buttons */}
-      <motion.div
+      {/* <motion.div
         className="md:w-1/3 mx-auto text-center"
         initial="hidden"
         whileInView="visible"
@@ -94,11 +88,11 @@ const MyProjects = () => {
             </button>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Project cards */}
       <motion.div
-        className="mx-auto text-center"
+        className="mx-auto"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -108,35 +102,42 @@ const MyProjects = () => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <div class="grid grid-cols-3 gap-5 py-5">
+        <div class="">
           {projectsToUse.map((project) => (
-            <div class="block rounded-lg mx-2 my-2 bg-white shadow-lg hover:scale-110 dark:bg-deep-blue">
+            <div class="flex flex-row my-5">
               <a href="#!">
                 <div
                   style={{
                     backgroundImage: `url(${project.image})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
-                    height: "330px",
-                    width: "100%",
+                    height: "350px",
+                    width: "500px",
                   }}
                 />
               </a>
-              <div class="p-6">
-                <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+              <div class="p-6 mx-6 flex flex-col justify-center ">
+                <h5 class="text-yellow font-source"> {project.subtitle} </h5>
+
+                <h5 class="mb-2 text-3xl font-helvetica font-semibold leading-tight text-white">
                   {project.title}
                 </h5>
-                <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                <p class="mb-4 text-base  text-light-blue font-helvetica font-light">
                   {project.description}
                 </p>
-                <button
+                <div class="font-source text-sm flex flex-row space-x-5 flex-wrap text-white">
+                  {project.technologies.map((technology, index) => (
+                    <div span={index}>{technology}</div>
+                  ))}
+                </div>
+                {/* <button
                   type="button"
                   class="inline-block rounded bg-blue px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                 >
                   {project.type}
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
