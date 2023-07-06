@@ -10,7 +10,7 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id="mh"
-      className="md:flex md:justify-between md:items-center px-10 md:h-full gap-16 py-5"
+      className="md:flex md:justify-between md:items-center px-10 pt-20 md:h-full gap-16 py-5"
     >
       {/* Image
       <div className="md:order-1 flex justify-left basis-2/5 z-10 mt-16 md:mt-32">
@@ -57,7 +57,7 @@ const Landing = ({ setSelectedPage }) => {
           Mai Hoang.
         </p>
         <p className="text-6xl font-helvetica font-semibold z-10 text-center md:text-start text-light-blue">
-          I want to build technology for social good.
+          I want to build tech for social good.
         </p>
         <motion.div
           initial="hidden" // when we start
@@ -72,7 +72,7 @@ const Landing = ({ setSelectedPage }) => {
         ></motion.div>
 
         <p className="mt-10 mb-7 font-helvetica font-light text-lg md:text-start text-deep-blue">
-          I'm based in the Bay Area, where I study Computer Science at Stanford
+          I'm based in the Bay Area, where I study computer science at Stanford
           University. I'm broadly interested in education, psychology/cognition,
           and artificial intelligence. Currently, I'm working at{" "}
           <span className="text-yellow hover:underline">

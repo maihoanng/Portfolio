@@ -6,7 +6,7 @@ const MyAbout = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <section id="about" className="pt-28">
+    <section id="about">
       {/* Image */}
       <div className="md:order-2 flex justify-left md:mt-32 ">
         {isAboveMediumScreens ? (
@@ -51,22 +51,37 @@ const MyAbout = () => {
           </p>
           <h4
             style={{ fontSize: "18px" }}
-            className="text-2xl font-helvetica font-light text-deep-blue"
+            className=" font-helvetica font-light text-white"
           >
-            Hi again! My name is Mai. I'm a developer with a passion for
-            designing and building technology that enhances the lives of
-            individuals and society as a whole, rather than being driven by
-            profit and efficiency.
+            Hi again! My name is Mai. I'm a developer passionate about designing
+            and building technology that enhances the lives of individuals and
+            society as a whole, rather than being driven by profit and
+            efficiency. As a first-generation student, I am particularly
+            interested in using tech to address inequities in education.
           </h4>
           <br />
           <p
             style={{
               fontSize: "18px",
             }}
-            className=" text-deep-blue font-helvetica font-light"
+            className=" text-white font-helvetica font-light"
           >
-            Right now, I am focused on building accessible digital experiences
-            for underserved youth in Singapore at{" "}
+            I first encountered computer science in my second quarter at
+            Stanford and quickly grew fascinated with the field. I have been
+            pursuing it for the past year and a half and love applying what I
+            learn to address the issues I care about. In my previous roles, I've
+            investigated ADHD to better inform diagnoses for women and people of
+            color with{" "}
+            <span className="text-yellow hover:underline">
+              <a href="https://hci.stanford.edu/">Stanford HCI Group</a>
+            </span>
+            , and collaborated with the{" "}
+            <span className="text-yellow hover:underline">
+              <a href="https://www.worldbank.org/en/home">World Bank</a>
+            </span>{" "}
+            to expand access to preschool in Vietnam. Currently, I am focused on
+            building accessible digital experiences for underserved youth in
+            Singapore at{" "}
             <span className="text-yellow hover:underline">
               <a href="https://rivervalleyirregulars.com/">
                 River Valley Irregulars
@@ -74,8 +89,22 @@ const MyAbout = () => {
             </span>
             .
           </p>
-          <p>
-            <br />
+          <br />
+          <p
+            style={{
+              fontSize: "18px",
+            }}
+            className=" text-white font-helvetica font-light"
+          >
+            When I'm free, I love to read, crochet, explore the California
+            coast, and go to new cafes and bookstores. I also love learning and
+            talking to new people! If you want to talk about CS, psychology,
+            literature, Asian American identity, philosophy, education, or
+            anything in between, reach out at{" "}
+            <span class="text-yellow text-semibold">
+              maihoang [at] stanford [dot] edu
+            </span>
+            !
           </p>
           <p style={{ fontSize: "18px" }} className="text-white font-light"></p>
         </motion.div>

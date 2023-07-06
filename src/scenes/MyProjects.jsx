@@ -17,7 +17,7 @@ const MyProjects = () => {
         "HTML/CSS ",
         "MongoDB ",
         "ExpressJS ",
-        "Google OAuth ",
+        "Google OAuth",
       ],
       image: "/assets/thingswithyou.png",
     },
